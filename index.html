@@ -40,7 +40,11 @@
         .page-container { width: 100%; max-width: 850px; margin: 20px auto; }
         .form-container { background-color: #f7f9fc; border: 2px solid var(--primary-color); border-radius: 15px; padding: 25px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
         .form-header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
-        .form-header img { width: 120px; height: auto; }
+        .form-header img {
+            width: 120px;
+            height: auto;
+            margin: 0 auto; /* This centers the logo */
+        }
         .form-header h1 { color: var(--primary-color); margin: 10px 0 5px 0; font-size: 2em; }
         .form-header h2 { color: var(--accent-color); margin: 0; font-size: 1.5em; font-weight: 500; }
         .instructions { background-color: var(--danger-light-bg); border-left: 5px solid var(--danger-color); padding: 15px 20px; margin-bottom: 25px; border-radius: 5px; }
@@ -305,11 +309,11 @@
 
         // --- SCRIPT FOR PORTAL LOGIC ---
         
-        // --- MODIFIED DATES FOR TESTING ---
+        // --- DATES ARE MODIFIED FOR TESTING ---
         const applications = [
-            { id: 1, startDate: new Date('2025-10-01T09:00:00'), endDate: new Date('2025-10-14T23:30:00'), color: 'blue', classes: ['1', '2', '3'] }, // CLOSED
-            { id: 2, startDate: new Date('2025-10-15T09:00:00'), endDate: new Date('2025-10-30T23:30:00'), color: 'purple', classes: ['4', '5', '6'] }, // LIVE NOW
-            { id: 3, startDate: new Date('2025-11-01T09:00:00'), endDate: new Date('2025-11-15T23:30:00'), color: 'teal', classes: ['7', '8', '9'] } // OPENING SOON
+            { id: 1, startDate: new Date('2025-10-01T09:00:00'), endDate: new Date('2025-10-14T23:30:00'), color: 'blue', classes: ['1', '2', '3'] }, // This will show as "Closed"
+            { id: 2, startDate: new Date('2025-10-15T09:00:00'), endDate: new Date('2025-10-30T23:30:00'), color: 'purple', classes: ['4', '5', '6'] }, // This will show as "Live Now"
+            { id: 3, startDate: new Date('2025-11-01T09:00:00'), endDate: new Date('2025-11-15T23:30:00'), color: 'teal', classes: ['7', '8', '9'] } // This will show as "Opening Soon"
         ];
 
         const portalWrapper = document.getElementById('portalWrapper');
